@@ -52,7 +52,6 @@
             position: relative;
         }
 
-        /* Particules de fond animées */
         .particles {
             position: fixed;
             top: 0;
@@ -72,27 +71,14 @@
         }
 
         @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
-        /* Barre de progression de défilement */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -119,10 +105,7 @@
             transition: all 0.3s ease;
         }
 
-        .navbar.scrolled {
-            padding: 0.7rem 2rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-        }
+        .navbar.scrolled { padding: 0.7rem 2rem; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
 
         .navbar-container {
             width: 100%;
@@ -150,17 +133,9 @@
             border-radius: 3px;
         }
 
-        .burger-menu.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .burger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .burger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
+        .burger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+        .burger-menu.active span:nth-child(2) { opacity: 0; }
+        .burger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
         .navbar h1 {
             font-size: 1.5rem;
@@ -169,21 +144,10 @@
             transition: transform 0.3s ease;
         }
 
-        .navbar h1:hover {
-            transform: scale(1.05);
-        }
+        .navbar h1:hover { transform: scale(1.05); }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-menu { display: flex; gap: 2rem; align-items: center; }
 
         .nav-links a {
             text-decoration: none;
@@ -205,21 +169,10 @@
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .nav-links a:hover { color: #667eea; transform: translateY(-2px); }
 
-        .nav-links a:hover {
-            color: #667eea;
-            transform: translateY(-2px);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
+        .social-icons { display: flex; gap: 1rem; align-items: center; }
 
         .social-icons a {
             display: flex;
@@ -235,16 +188,8 @@
             flex-shrink: 0;
         }
 
-        .social-icons a:hover {
-            transform: translateY(-3px) rotate(5deg);
-            box-shadow: var(--hover-shadow);
-        }
-
-        .social-icons svg {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-        }
+        .social-icons a:hover { transform: translateY(-3px) rotate(5deg); box-shadow: var(--hover-shadow); }
+        .social-icons svg { width: 20px; height: 20px; flex-shrink: 0; }
 
         .theme-toggle {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -261,15 +206,8 @@
             flex-shrink: 0;
         }
 
-        .theme-toggle:hover {
-            transform: translateY(-3px) rotate(180deg);
-            box-shadow: var(--hover-shadow);
-        }
-
-        .theme-toggle svg {
-            width: 20px;
-            height: 20px;
-        }
+        .theme-toggle:hover { transform: translateY(-3px) rotate(180deg); box-shadow: var(--hover-shadow); }
+        .theme-toggle svg { width: 20px; height: 20px; }
 
         .hero {
             min-height: 100vh;
@@ -283,11 +221,7 @@
             z-index: 1;
         }
 
-        .hero-content h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
-        }
+        .hero-content h2 { font-size: 3.5rem; margin-bottom: 1rem; animation: fadeInUp 1s ease; }
 
         .hero-content h2 .gradient-text {
             background: linear-gradient(45deg, #fff, #667eea);
@@ -296,12 +230,7 @@
             background-clip: text;
         }
 
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.2s;
-            animation-fill-mode: both;
-        }
+        .hero-content p { font-size: 1.5rem; margin-bottom: 2rem; animation: fadeInUp 1s ease 0.2s; animation-fill-mode: both; }
 
         .hero-content .highlight {
             background: rgba(255, 255, 255, 0.1);
@@ -339,15 +268,8 @@
             transition: width 0.5s, height 0.5s;
         }
 
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
+        .btn:hover::before { width: 300px; height: 300px; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
 
         section {
             padding: 5rem 2rem;
@@ -389,11 +311,7 @@
             border-radius: 2px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
 
         .skill-card {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -418,32 +336,12 @@
             transition: transform 0.6s ease;
         }
 
-        .skill-card:hover::before {
-            transform: rotate(45deg) translate(20%, 20%);
-        }
+        .skill-card:hover::before { transform: rotate(45deg) translate(20%, 20%); }
+        .skill-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: var(--hover-shadow); }
+        .skill-card h4 { font-size: 1.5rem; margin-bottom: 1rem; position: relative; z-index: 1; }
+        .skill-card p { position: relative; z-index: 1; }
 
-        .skill-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--hover-shadow);
-        }
-
-        .skill-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .skill-card p {
-            position: relative;
-            z-index: 1;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 
         .project-card {
             background: var(--card-bg);
@@ -466,14 +364,8 @@
             transition: opacity 0.3s;
         }
 
-        .project-card:hover::after {
-            opacity: 1;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--hover-shadow);
-        }
+        .project-card:hover::after { opacity: 1; }
+        .project-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: var(--hover-shadow); }
 
         .project-image {
             width: 100%;
@@ -487,15 +379,9 @@
             transition: transform 0.3s;
         }
 
-        .project-card:hover .project-image {
-            transform: scale(1.1);
-        }
+        .project-card:hover .project-image { transform: scale(1.1); }
 
-        .project-content {
-            padding: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
+        .project-content { padding: 1.5rem; position: relative; z-index: 1; }
 
         .project-badge {
             display: inline-block;
@@ -510,18 +396,11 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
-            }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
         }
 
-        .project-content p {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
+        .project-content p { margin-bottom: 0.5rem; line-height: 1.6; }
 
         .project-content h4 {
             font-size: 1.3rem;
@@ -530,28 +409,15 @@
             transition: color 0.3s;
         }
 
-        .project-card:hover .project-content h4 {
-            color: #667eea;
-        }
+        .project-card:hover .project-content h4 { color: #667eea; }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+        .contact-form { max-width: 600px; margin: 0 auto; }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+        .form-group { margin-bottom: 1.5rem; }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text-primary); }
 
-        .form-group input,
-        .form-group textarea {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 1rem;
             border: 2px solid #e0e0e0;
@@ -562,17 +428,13 @@
             color: var(--text-primary);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: #667eea;
             transform: translateY(-2px);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+        .form-group textarea { resize: vertical; min-height: 150px; }
 
         .submit-btn {
             width: 100%;
@@ -587,16 +449,9 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--hover-shadow);
-        }
+        .submit-btn:hover { transform: translateY(-3px); box-shadow: var(--hover-shadow); }
+        .submit-btn:active { transform: translateY(-1px); }
 
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Bouton scroll to top */
         .scroll-top {
             position: fixed;
             bottom: 30px;
@@ -617,34 +472,17 @@
             z-index: 999;
         }
 
-        .scroll-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--hover-shadow);
-        }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { transform: translateY(-5px); box-shadow: var(--hover-shadow); }
 
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         footer {
@@ -657,11 +495,8 @@
             z-index: 1;
         }
 
-        footer p {
-            margin: 0.5rem 0;
-        }
+        footer p { margin: 0.5rem 0; }
 
-        /* Toast amélioré */
         #toast {
             position: fixed;
             bottom: 20px;
@@ -678,35 +513,20 @@
             border-left: 4px solid #667eea;
         }
 
-        #toast.show {
-            display: block;
-            opacity: 1;
-        }
+        #toast.show { display: block; opacity: 1; }
 
-        /* Animations d'entrée pour les sections */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 768px) {
-            .burger-menu {
-                display: flex;
-            }
-
-            .navbar {
-                padding: 1rem;
-            }
-
-            .navbar h1 {
-                font-size: 1.2rem;
-            }
+            .burger-menu { display: flex; }
+            .navbar { padding: 1rem; }
+            .navbar h1 { font-size: 1.2rem; }
 
             .nav-links {
                 position: fixed;
@@ -724,15 +544,8 @@
                 z-index: 999;
             }
 
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-menu {
-                flex-direction: column;
-                gap: 0;
-                width: 100%;
-            }
+            .nav-links.active { left: 0; }
+            .nav-menu { flex-direction: column; gap: 0; width: 100%; }
 
             .nav-links a {
                 width: 100%;
@@ -741,9 +554,7 @@
                 transition: background 0.3s, color 0.3s;
             }
 
-            .nav-links a:hover {
-                background: rgba(102, 126, 234, 0.1);
-            }
+            .nav-links a:hover { background: rgba(102, 126, 234, 0.1); }
 
             .social-icons {
                 flex-direction: row;
@@ -754,138 +565,40 @@
                 border-top: 2px solid rgba(102, 126, 234, 0.2);
             }
 
-            .social-icons a,
-            .theme-toggle {
-                width: 45px;
-                height: 45px;
-            }
-
-            .hero {
-                min-height: 100vh;
-                padding: 1rem;
-                padding-top: 100px;
-            }
-
-            .hero-content h2 {
-                font-size: 1.8rem;
-                margin-bottom: 0.8rem;
-            }
-
-            .hero-content p {
-                font-size: 1.1rem;
-                margin-bottom: 1.2rem;
-            }
-
-            .hero-content p:last-of-type {
-                font-size: 1rem !important;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.95rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .section-white {
-                margin: 1rem;
-                border-radius: 15px;
-            }
-
-            h3 {
-                font-size: 1.8rem;
-                margin-bottom: 2rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .skill-card {
-                padding: 1.5rem;
-            }
-
-            .skill-card h4 {
-                font-size: 1.3rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .project-card {
-                margin: 0;
-            }
-
-            .project-image {
-                height: 150px;
-                font-size: 2.5rem;
-            }
-
-            .project-content {
-                padding: 1.2rem;
-            }
-
-            .project-content h4 {
-                font-size: 1.2rem;
-            }
-
-            .project-content p {
-                font-size: 0.95rem;
-            }
-
-            .project-badge {
-                font-size: 0.8rem;
-                padding: 0.25rem 0.6rem;
-            }
-
-            .scroll-top {
-                bottom: 20px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
-            }
+            .social-icons a, .theme-toggle { width: 45px; height: 45px; }
+            .hero { min-height: 100vh; padding: 1rem; padding-top: 100px; }
+            .hero-content h2 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+            .hero-content p { font-size: 1.1rem; margin-bottom: 1.2rem; }
+            .hero-content p:last-of-type { font-size: 1rem !important; }
+            .btn { padding: 0.8rem 1.5rem; font-size: 0.95rem; }
+            section { padding: 3rem 1rem; }
+            .section-white { margin: 1rem; border-radius: 15px; }
+            h3 { font-size: 1.8rem; margin-bottom: 2rem; }
+            .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .skill-card { padding: 1.5rem; }
+            .skill-card h4 { font-size: 1.3rem; }
+            .projects-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .project-card { margin: 0; }
+            .project-image { height: 150px; font-size: 2.5rem; }
+            .project-content { padding: 1.2rem; }
+            .project-content h4 { font-size: 1.2rem; }
+            .project-content p { font-size: 0.95rem; }
+            .project-badge { font-size: 0.8rem; padding: 0.25rem 0.6rem; }
+            .scroll-top { bottom: 20px; right: 20px; width: 45px; height: 45px; }
         }
 
         @media (max-width: 480px) {
-            .nav-links {
-                width: 80%;
-            }
-
-            .hero-content h2 {
-                font-size: 1.5rem;
-            }
-
-            .hero-content p {
-                font-size: 1rem;
-            }
-
-            .hero-content p:last-of-type {
-                font-size: 0.9rem !important;
-            }
-
-            h3 {
-                font-size: 1.5rem;
-            }
-
-            .skill-card h4 {
-                font-size: 1.1rem;
-            }
-
-            .project-content h4 {
-                font-size: 1.1rem;
-            }
+            .nav-links { width: 80%; }
+            .hero-content h2 { font-size: 1.5rem; }
+            .hero-content p { font-size: 1rem; }
+            .hero-content p:last-of-type { font-size: 0.9rem !important; }
+            h3 { font-size: 1.5rem; }
+            .skill-card h4 { font-size: 1.1rem; }
+            .project-content h4 { font-size: 1.1rem; }
         }
 
-        /* Amélioration de l'accessibilité */
         @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
+            *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
@@ -895,10 +608,7 @@
 </head>
 
 <body data-theme="dark">
-    <!-- Barre de progression de défilement -->
     <div class="scroll-progress" id="scroll-progress"></div>
-
-    <!-- Particules de fond -->
     <div class="particles" id="particles"></div>
 
     <nav class="navbar" id="navbar">
@@ -923,21 +633,17 @@
                 <div class="social-icons">
                     <a href="https://github.com/kwentin03" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Profil GitHub">
                         <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/quentin-blas-trinidad-786455291/" target="_blank"
-                        rel="noopener noreferrer" title="LinkedIn" aria-label="Profil LinkedIn">
+                    <a href="https://www.linkedin.com/in/quentin-blas-trinidad-786455291/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Profil LinkedIn">
                         <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
                     </a>
                     <button class="theme-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
                         <svg id="theme-icon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                            <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
                         </svg>
                     </button>
                 </div>
@@ -996,8 +702,18 @@
                 <div class="project-content">
                     <h4>Projet ResaHotel</h4>
                     <span class="project-badge">2ème année BTS - 2026</span>
-                    <p>Application complète de gestion pour restaurant et hôtel développée lors de mon redoublement en
-                        2ème année de BTS SIO.</p>
+                    <p>Application complète de gestion pour restaurant et hôtel développée lors de mon redoublement en 2ème année de BTS SIO.</p>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="window.open('https://github.com/Uilsaun/asimov-ent', '_blank')">
+                <div class="project-image" style="background: linear-gradient(135deg, #1a6b3c 0%, #2d9b5a 100%);">🏫</div>
+                <div class="project-content">
+                    <h4>ENT Collège Asimov</h4>
+                    <span class="project-badge">Client Lourd | 2025-2026</span>
+                    <p><strong>Espace Numérique de Travail scolaire</strong></p>
+                    <p>Application multi-rôles (élèves, professeurs, parents, CPE, direction, secrétariat) pour le Collège Asimov fictif.</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Technologies : HTML, CSS, JavaScript (Vanilla)</p>
                 </div>
             </div>
 
@@ -1007,10 +723,8 @@
                     <h4>Projet Sakura - Client Léger</h4>
                     <span class="project-badge">Web | 2025</span>
                     <p><strong>Site de gestion de films</strong></p>
-                    <p>Développement d'un site web pour la gestion et le traitement de films avec interface utilisateur
-                        moderne.</p>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Technologies : HTML, CSS, JavaScript,
-                        PHP</p>
+                    <p>Développement d'un site web pour la gestion et le traitement de films avec interface utilisateur moderne.</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem; color: #666;">Technologies : HTML, CSS, JavaScript, PHP</p>
                 </div>
             </div>
 
@@ -1046,8 +760,7 @@
                     <h4>Stage POMA - Outils Digitaux</h4>
                     <span class="project-badge">Stage 2025</span>
                     <p><strong>Voreppe | Mars-Avril 2025</strong></p>
-                    <p>Traitement et analyse de données pendant 5 semaines dans le cadre du développement d'outils
-                        digitaux.</p>
+                    <p>Traitement et analyse de données pendant 5 semaines dans le cadre du développement d'outils digitaux.</p>
                 </div>
             </div>
 
@@ -1063,15 +776,12 @@
             </div>
 
             <div class="project-card" style="border: 2px dashed #667eea;">
-                <div class="project-image"
-                    style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);">
-                    🚀</div>
+                <div class="project-image" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);">🚀</div>
                 <div class="project-content">
                     <h4>Projet en cours...</h4>
                     <span class="project-badge" style="background: #e0e0e0; color: #666;">À venir</span>
                     <p>Nouveau projet à développer dans le cadre de ma formation BTS SIO SLAM.</p>
-                    <p style="font-style: italic; color: #999; margin-top: 0.5rem;">Restez connecté pour découvrir mon
-                        prochain projet !</p>
+                    <p style="font-style: italic; color: #999; margin-top: 0.5rem;">Restez connecté pour découvrir mon prochain projet !</p>
                 </div>
             </div>
         </div>
@@ -1080,14 +790,11 @@
     <section id="parcours" class="section-white fade-in">
         <h3>Mon Parcours</h3>
         <div style="max-width: 800px; margin: 0 auto;">
-            <div
-                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: white; margin-bottom: 2rem;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: white; margin-bottom: 2rem;">
                 <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">🎓 Formation</h4>
-                <p style="margin-bottom: 0.5rem;"><strong>2024-2026 :</strong> BTS SIO option SLAM (Solutions
-                    Logicielles et Applications Métiers) - Lycée Louise Michel, Grenoble</p>
+                <p style="margin-bottom: 0.5rem;"><strong>2024-2026 :</strong> BTS SIO option SLAM (Solutions Logicielles et Applications Métiers) - Lycée Louise Michel, Grenoble</p>
                 <p style="margin-bottom: 0.5rem;"><strong>2024-2025 :</strong> Vice-président de l'association SIO</p>
-                <p><strong>2020-2023 :</strong> Bac Pro Systèmes Numériques option RISC (Réseaux Informatiques et
-                    Systèmes Communicants)</p>
+                <p><strong>2020-2023 :</strong> Bac Pro Systèmes Numériques option RISC (Réseaux Informatiques et Systèmes Communicants)</p>
             </div>
 
             <div style="background: var(--card-bg); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; transition: background 0.3s;">
@@ -1106,13 +813,11 @@
                 </div>
                 <div>
                     <p style="font-weight: bold; color: var(--text-primary);">Août 2025 : Job d'été McDonald's</p>
-                    <p>Restauration rapide, Aide à la clientèle, Service des boissons et des plateaux, Plonge et
-                        Nettoyage du restaurant</p>
+                    <p>Restauration rapide, Aide à la clientèle, Service des boissons et des plateaux, Plonge et Nettoyage du restaurant</p>
                 </div>
             </div>
 
-            <div
-                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: white;">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: white;">
                 <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">🏆 Certifications</h4>
                 <p style="margin-bottom: 0.5rem;">✓ Python (Microsoft Learn)</p>
                 <p style="margin-bottom: 0.5rem;">✓ Réseau Cisco CCNA v7</p>
@@ -1146,14 +851,13 @@
     </section>
 
     <section id="contact" class="section-white fade-in">
-    <h3>Me Contacter</h3>
-    <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 1.5rem;">Envoyez-moi un email :</h2>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
-        <a id="email-link" href="mailto:quentinblastrinidad@gmail.com" class="btn">quentinblastrinidad@gmail.com</a>
-        <button id="copy-email" class="submit-btn" style="padding: 0.6rem 1rem; width: auto;">📋 Copier l'email</button>
-    </div>
-    
-</section>
+        <h3>Me Contacter</h3>
+        <h2 style="color: var(--text-primary); text-align: center; margin-bottom: 1.5rem;">Envoyez-moi un email :</h2>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
+            <a id="email-link" href="mailto:quentinblastrinidad@gmail.com" class="btn">quentinblastrinidad@gmail.com</a>
+            <button id="copy-email" class="submit-btn" style="padding: 0.6rem 1rem; width: auto;">📋 Copier l'email</button>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 Quentin Blas-Trinidad </p>
@@ -1162,40 +866,33 @@
         <p>N'hésitez pas à m'envoyer un mail pour me dire ce que vous en pensez, ou si vous êtes intéressé par mon profil pour une alternance !!!</p>
     </footer>
 
-    <!-- Bouton scroll to top -->
     <button class="scroll-top" id="scroll-top" aria-label="Retour en haut">
         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
     </button>
 
-    <!-- Toast notification -->
     <div id="toast"></div>
 
     <script>
-        // Création des particules de fond
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
-            
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                
                 const size = Math.random() * 5 + 2;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
                 particle.style.animationDelay = Math.random() * 5 + 's';
-                
                 particlesContainer.appendChild(particle);
             }
         }
 
         createParticles();
 
-        // Barre de progression de défilement
         window.addEventListener('scroll', () => {
             const scrollProgress = document.getElementById('scroll-progress');
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -1204,52 +901,31 @@
             scrollProgress.style.width = progress + '%';
         });
 
-        // Animation navbar au scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 100) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
 
-        // Bouton scroll to top
         const scrollTopBtn = document.getElementById('scroll-top');
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
+            if (window.scrollY > 300) scrollTopBtn.classList.add('visible');
+            else scrollTopBtn.classList.remove('visible');
         });
 
         scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Animations au scroll pour les sections
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Mise en surbrillance du lien actif dans la navbar
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-menu a');
 
@@ -1257,21 +933,14 @@
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
+                if (window.pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
             });
         });
 
-        // Gestion du menu burger
         const burgerMenu = document.getElementById('burger-menu');
         const navLinksEl = document.getElementById('nav-links');
         const navMenuLinks = document.querySelectorAll('.nav-menu a');
@@ -1295,7 +964,6 @@
             }
         });
 
-        // Gestion du thème
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const body = document.body;
@@ -1306,26 +974,17 @@
         function toggleTheme() {
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
-            if (newTheme === 'dark') {
-                themeIcon.innerHTML = moonIcon;
-            } else {
-                themeIcon.innerHTML = sunIcon;
-            }
+            themeIcon.innerHTML = newTheme === 'dark' ? moonIcon : sunIcon;
         }
 
         const savedTheme = localStorage.getItem('theme') || 'dark';
         body.setAttribute('data-theme', savedTheme);
-        if (savedTheme === 'light') {
-            themeIcon.innerHTML = sunIcon;
-        }
+        if (savedTheme === 'light') themeIcon.innerHTML = sunIcon;
 
         themeToggle.addEventListener('click', toggleTheme);
 
-        // Gestion de l'email
         document.getElementById('copy-email').addEventListener('click', async function () {
             const email = 'quentinblastrinidad@gmail.com';
             try {
@@ -1344,27 +1003,17 @@
             const toast = document.getElementById('toast');
             toast.textContent = msg;
             toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
-        // Smooth scroll pour les liens d'ancrage
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Effet de parallaxe sur le hero
         window.addEventListener('scroll', () => {
             const hero = document.querySelector('.hero');
             const scrolled = window.pageYOffset;
@@ -1374,4 +1023,3 @@
 </body>
 
 </html>
-
